@@ -12,6 +12,35 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "AAACommentMaker",
+      "properties": {
+        "aaaCommentMaker.symbol": {
+          "type": "string",
+          "default": "=",
+          "description": "Symbol used to fill created comments."
+        },
+        "aaaCommentMaker.noCommentNbSymbol": {
+          "type": "integer",
+          "default": 8,
+          "description": "Number of symbols around title when comment is empty"
+        },
+        "aaaCommentMaker.commentMinNbSymbol": {
+          "type": "integer",
+          "default": 6,
+          "description": "Minimum number of symbols around title when comment is not empty"
+        },
+        "aaaCommentMaker.titles": {
+          "type": "array",
+          "default": [
+            "Arrange",
+            "Act",
+            "Assert"
+          ],
+          "description": "Titles offered"
+        }
+      }
+    },
     "commands": [
       {
         "command": "aaa-comment-maker.helloWorld",
