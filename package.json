@@ -43,8 +43,8 @@
     },
     "commands": [
       {
-        "command": "aaa-comment-maker.helloWorld",
-        "title": "Hello World"
+        "command": "aaa-comment-maker.createAAAComment",
+        "title": "Create AAA comment from current lines"
       }
     ]
   },
