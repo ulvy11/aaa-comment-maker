@@ -1,8 +1,11 @@
 {
   "name": "aaa-comment-maker",
-  "displayName": "AAA comment maker",
-  "description": "",
-  "version": "0.0.1",
+  "displayName": "AAA Comment Maker",
+  "description": "Create comments with customizable titles for the selected lines",
+  "publisher": "Ulvy",
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.88.0"
   },
@@ -69,5 +72,9 @@
   },
   "dependencies": {
     "comment-json": "^4.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ulvy11/aaa-comment-maker"
   }
 }
