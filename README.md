@@ -25,6 +25,10 @@ N/A
 
 ## Release Notes
 
+### 1.0.1
+
+- Indentation will not be computed, but taken from the first selected line
+
 ### 1.0.0
 
 Initial release of AAA Comment Maker

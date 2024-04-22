@@ -1,9 +1,9 @@
-# Change Log
+## 1.0.1
 
-All notable changes to the "aaa-comment-maker" extension will be documented in this file.
+### Changed
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Indentation will not be computed, but taken from the first selected line
 
-## [Unreleased]
+## 1.0.0
 
 - Initial release
