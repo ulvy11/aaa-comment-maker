@@ -43,7 +43,7 @@ class AAACommentParametersMaker {
 
   public createMultiLineComment(
     lines: string[],
-    tab: number,
+    tab: string,
     picked: string
   ): string[] {
     let commentedLines: string[] = [];
@@ -109,7 +109,7 @@ class AAACommentParametersMaker {
    */
   public createOneLineComment(
     text: string,
-    tab: number,
+    tab: string,
     nbSymbol: number
   ): string {
     let middle: string;
@@ -126,7 +126,7 @@ class AAACommentParametersMaker {
     }
 
     return (
-      SPACE.repeat(tab) +
+      tab +
       this._commentTokens[0] +
       SPACE +
       middle +
@@ -186,20 +186,11 @@ export async function createAAAComment() {
 
   const text = editor.document.getText(textRange);
 
-  let tab = 0;
   const firstTextLine = text.split("\n")[0];
-  const tabSize = getTabSize();
-
-  for (let index = 0; index < firstTextLine.length; index++) {
-    const char = firstTextLine.charAt(tab);
-    if (char == " ") {
-      tab++;
-    } else if (char == "\t") {
-      tab += tabSize;
-    } else {
-      break;
-    }
-  }
+  const tab = firstTextLine.substring(
+    0,
+    firstTextLine.length - firstTextLine.trim().length
+  );
 
   const lines = text.split("\n").map((s) => s.trim());
 
@@ -212,15 +203,4 @@ export async function createAAAComment() {
   editor.edit((editBuilder) => {
     editBuilder.replace(textRange, commentedLines.join("\n"));
   });
-}
-
-function getTabSize(): number {
-  const editor = vscode.window.activeTextEditor;
-  if (!editor) return 0;
-
-  const editorTabSize = editor.options.tabSize;
-
-  if (!editorTabSize) return 4;
-
-  return Number(editorTabSize);
 }
