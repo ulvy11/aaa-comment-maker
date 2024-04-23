@@ -1,3 +1,9 @@
+## 1.0.2
+
+### Changed
+
+- Removing trailing blank for one line comment token
+
 ## 1.0.1
 
 ### Changed

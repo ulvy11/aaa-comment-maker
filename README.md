@@ -25,6 +25,10 @@ N/A
 
 ## Release Notes
 
+### 1.0.2
+
+- Removing trailing blank for one line comment token
+
 ### 1.0.1
 
 - Indentation will not be computed, but taken from the first selected line
