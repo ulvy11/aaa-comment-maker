@@ -130,8 +130,7 @@ class AAACommentParametersMaker {
       this._commentTokens[0] +
       SPACE +
       middle +
-      SPACE +
-      this._commentTokens[1]
+      (this._commentTokens[1] !== "" ? SPACE + this._commentTokens[1] : "")
     );
   }
 }
