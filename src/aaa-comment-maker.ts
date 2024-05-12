@@ -188,7 +188,7 @@ export async function createAAAComment() {
   const firstTextLine = text.split("\n")[0];
   const tab = firstTextLine.substring(
     0,
-    firstTextLine.length - firstTextLine.trim().length
+    firstTextLine.length - firstTextLine.trimStart().length
   );
 
   const lines = text.split("\n").map((s) => s.trim());
