@@ -1,4 +1,4 @@
-# AAA-comment-maker README
+# AAA-comment-maker
 
 ![demo](assets/demo.gif)
 
@@ -24,6 +24,10 @@ This extension contributes the following settings:
 N/A
 
 ## Release Notes
+
+### 1.0.3
+
+- Indentation problem when multiple lines were selected fixed
 
 ### 1.0.2
 

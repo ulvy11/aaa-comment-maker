@@ -1,3 +1,9 @@
+## 1.0.3
+
+### Fixed
+
+- Indentation problem when multiple lines were selected
+
 ## 1.0.2
 
 ### Changed
